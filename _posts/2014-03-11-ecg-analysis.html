@@ -1,0 +1,341 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style><title>ecg_result_analysis</title></head><body><hr />
+<p>layout: default</p>
+<p>title: ecg result analysis</p>
+<hr />
+<div class="toc">
+<ul>
+<li><a href="#meeting">Meeting</a></li>
+<li><a href="#201439">2014/3/9</a><ul>
+<li><a href="#overall-structure">Overall Structure</a></li>
+<li><a href="#results-of-abbyy-on-pic22010">Results of ABBYY on Pic2/2010</a></li>
+<li><a href="#to-do">To Do</a></li>
+</ul>
+</li>
+<li><a href="#2014310">2014/3/10</a><ul>
+<li><a href="#selection">Selection</a></li>
+</ul>
+</li>
+<li><a href="#2014311">2014/3/11</a><ul>
+<li><a href="#extraction">Extraction</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="meeting">Meeting</h1>
+<ul>
+<li>work on the open source OCR</li>
+<li>
+<p>using training methods, like</p>
+</li>
+<li>
+<p>learning and get the normal range</p>
+</li>
+<li>
+<p>using possible relationship to modify the range</p>
+</li>
+<li>
+<p>do some little experiment on knowing some range of some parameters</p>
+</li>
+<li>think about the overall architucture</li>
+</ul>
+<h1 id="201439">2014/3/9</h1>
+<h2 id="overall-structure">Overall Structure</h2>
+<ul>
+<li>ImageJ for the pre-processing</li>
+<li>ABBYY(A) and tesseract(T) for the OCR engine</li>
+</ul>
+<h2 id="results-of-abbyy-on-pic22010">Results of ABBYY on Pic2/2010</h2>
+<p>Two main problems:</p>
+<ul>
+<li>Miss-understanding the key-value structure</li>
+<li>Wrong in the key name</li>
+</ul>
+<p>I guess the job has something to do with Information Extraction and maybe something like fuzzy matching wil be needed for key name error.</p>
+<p>Personally, I believe results of A are better than T.</p>
+<p>Comments on the result:</p>
+<ul>
+<li>A big problem on T is : character.</li>
+<li>Sometimes A and T error in the same place.</li>
+<li>Structure recognize error for A.</li>
+<li>Image quality I think is a very important factor.</li>
+</ul>
+<p>Detailed comments:</p>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Comments A</th>
+<th>T</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Wrong in key name (image quality) and structure, number correct.</td>
+<td>Quite bad, lots of noise</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Wrong for some missing in the image</td>
+<td>Same</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td>Works better on T than A （misrecognize the structure）</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Bad</td>
+<td>Chinese</td>
+</tr>
+<tr>
+<td><strong>5</strong></td>
+<td>Error in Chinese, :, 766ms-76tos, 2.20mv-2.2Qmv, <strong>QTC wrong(QT correct)</strong>, lots of errors on key-value pairs</td>
+<td><strong>Some same to A</strong>, offen replace : by other characters, seems better on T (except Chinese)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Error about structure, 146ms-1伽</td>
+<td>Right on 146, 0.89-0.s9</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Structure, 78-73, QTc-^Tc,</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Classification:</p>
+<ul>
+<li>number+character</li>
+<li>number-&gt;character. 89-s9, range is reliable</li>
+<li>key name error</li>
+<li>structure error</li>
+</ul>
+<h2 id="to-do">To Do</h2>
+<p>Experiment on some selected pics and try to use range to do the correction. From the result above, range may just working on 1 error and something like digit may be useful. Using possible relationship may be helpful to do the decision in a small range case (not sure).</p>
+<p>To do the experiment, 2 things needed to be done:</p>
+<ul>
+<li>Selection</li>
+<li>Fuzzy matching the key name, Levenshtein Distance？</li>
+</ul>
+<p>Besides, there wil be some boring adjustment I think.</p>
+<h1 id="2014310">2014/3/10</h1>
+<h2 id="selection">Selection</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Num</th>
+<th>Type</th>
+<th>Num</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>41</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>9</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1</td>
+<td>7</td>
+<td>1</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1</td>
+<td>9</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1</td>
+<td>11</td>
+<td>12</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>So I will choose type 0 to do the experiment.</p>
+<p>Parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Key name</th>
+<th>range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vent. rate</td>
+<td>60-100</td>
+</tr>
+<tr>
+<td>PR interval</td>
+<td>120-200</td>
+</tr>
+<tr>
+<td>QRS duration</td>
+<td>60-100 (max 110)</td>
+</tr>
+<tr>
+<td>QT/QTc</td>
+<td>320-440 &lt;440</td>
+</tr>
+<tr>
+<td>P-R-T axes</td>
+<td>?</td>
+</tr>
+</tbody>
+</table>
+<h1 id="2014311">2014/3/11</h1>
+<h2 id="extraction">Extraction</h2>
+<p>Approximate string searching</p>
+<ul>
+<li>Should '\n' be removed or should the file be read each line?</li>
+<li>Result show have the same length as the target. (improve?)</li>
+<li>How to futher analysis the structure?</li>
+</ul></body></html>
