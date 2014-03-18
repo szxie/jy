@@ -120,11 +120,7 @@ body{font-size:16px;}
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-</style><title>ecg_result_analysis</title></head><body><hr />
-<p>layout: default</p>
-<p>title: ecg result analysis</p>
-<hr />
-<div class="toc">
+</style><title>ecg_result_analysis</title></head><body><div class="toc">
 <ul>
 <li><a href="#meeting">Meeting</a></li>
 <li><a href="#201439">2014/3/9</a><ul>
@@ -139,6 +135,15 @@ body{font-size:16px;}
 </li>
 <li><a href="#2014311">2014/3/11</a><ul>
 <li><a href="#extraction">Extraction</a></li>
+</ul>
+</li>
+<li><a href="#2014313">2014/3/13</a><ul>
+<li><a href="#result-of-values-t">Result of Values (T)</a></li>
+</ul>
+</li>
+<li><a href="#2014317">2014/3/17</a><ul>
+<li><a href="#checking-the-values-t">Checking The Values (T)</a></li>
+<li><a href="#result-of-values-a">Result of Values (A)</a></li>
 </ul>
 </li>
 </ul>
@@ -338,4 +343,144 @@ body{font-size:16px;}
 <li>Should '\n' be removed or should the file be read each line?</li>
 <li>Result show have the same length as the target. (improve?)</li>
 <li>How to futher analysis the structure?</li>
+</ul>
+<p>Simple structure analysis:</p>
+<ul>
+<li>25/41 meet the structure (result of T), 22/41 meet (of A)</li>
+<li>for the rest, 8/16 is key order error, 8/16 is unit location error</li>
+</ul>
+<p>Simple value result analysis (on 25 pics and 4 parameters, T):</p>
+<ul>
+<li>Incorrect: 19 2 20 3 45 47 50 54 65</li>
+<li>Incorrect on number: 2 20 3</li>
+<li>Incorrect for noise infomation: 50</li>
+</ul>
+<p>Error rate: 9/25</p>
+<p>Number analysis</p>
+<h1 id="2014313">2014/3/13</h1>
+<h2 id="result-of-values-t">Result of Values (T)</h2>
+<p>Parameter1: 21/25 for recognized as numbers and 21/21 are correct</p>
+<p>Parameter2: 22/25 and 22/22</p>
+<p>Parameter3: 23/25 and 23/23</p>
+<p>value not number 2.txt parameter 0</p>
+<p>value not number 20.txt parameter 0</p>
+<p>value not number 45.txt parameter 0</p>
+<p>value not number 50.txt parameter 0</p>
+<p>21 17</p>
+<p>value not number 20.txt parameter 1</p>
+<p>value not number 50.txt parameter 1</p>
+<p>value not number 54.txt parameter 1</p>
+<p>22 20</p>
+<p>value not number 19.txt parameter 2</p>
+<p>value not number 20.txt parameter 2</p>
+<p>23 22</p>
+<h1 id="2014317">2014/3/17</h1>
+<h2 id="checking-the-values-t">Checking The Values (T)</h2>
+<p>For those values aren't number. 9/(25*3)</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Parameter1</th>
+<th>Parameter2</th>
+<th>Parameter3</th>
+<th>Correct 1</th>
+<th>Correct 2</th>
+<th>Correct 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>(4</td>
+<td></td>
+<td></td>
+<td>74</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td></td>
+<td></td>
+<td>{ 78</td>
+<td></td>
+<td></td>
+<td>78</td>
+</tr>
+<tr>
+<td>20</td>
+<td>â€” 51</td>
+<td>,170</td>
+<td>no</td>
+<td>61</td>
+<td>170</td>
+<td>110</td>
+</tr>
+<tr>
+<td>45</td>
+<td>87 1</td>
+<td></td>
+<td></td>
+<td>87</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>50</td>
+<td>* 77</td>
+<td>. 144</td>
+<td></td>
+<td>77</td>
+<td>144</td>
+<td></td>
+</tr>
+<tr>
+<td>54</td>
+<td></td>
+<td>ml 5.</td>
+<td></td>
+<td></td>
+<td></td>
+<td>84</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>9 errors in total. </li>
+<li>5/9 are for noise included. </li>
+</ul>
+<p>2.txt pic problem. 20.txt pic quality. 54.txt pic problem.</p>
+<p>To remove the noise, match the number by digits.</p>
+<p>Check more?</p>
+<h2 id="result-of-values-a">Result of Values (A)</h2>
+<p>value not number 11.txt parameter 0</p>
+<p>value not number 14.txt parameter 0</p>
+<p>value not number 17.txt parameter 0</p>
+<p>value not number 19.txt parameter 0</p>
+<p>value not number 2.txt parameter 0</p>
+<p>value not number 20.txt parameter 0</p>
+<p>value not number 34.txt parameter 0</p>
+<p>value not number 38.txt parameter 0</p>
+<p>value not number 40.txt parameter 0</p>
+<p>value not number 41.txt parameter 0</p>
+<p>value not number 45.txt parameter 0</p>
+<p>value not number 47.txt parameter 0</p>
+<p>value not number 56.txt parameter 0</p>
+<p>value not number 57.txt parameter 0</p>
+<p>value not number 58.txt parameter 0</p>
+<p>value not number 60.txt parameter 0</p>
+<p>value not number 64.txt parameter 0</p>
+<p>num of values as number: 5 num of values outof range: 3</p>
+<p>value not number 20.txt parameter 1</p>
+<p>value not number 41.txt parameter 1</p>
+<p>num of values as number: 20 num of values outof range: 19</p>
+<p>value not number 20.txt parameter 2</p>
+<p>value not number 41.txt parameter 2</p>
+<p>num of values as number: 20 num of values outof range: 19</p>
+<ul>
+<li>Total 22</li>
+<li>p1 5/5</li>
+<li>p2 20/20</li>
+<li>p3 20/20</li>
 </ul></body></html>
