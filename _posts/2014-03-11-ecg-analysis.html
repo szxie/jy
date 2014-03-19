@@ -146,6 +146,12 @@ body{font-size:16px;}
 <li><a href="#result-of-values-a">Result of Values (A)</a></li>
 </ul>
 </li>
+<li><a href="#2014318">2014/3/18</a><ul>
+<li><a href="#problem">Problem</a></li>
+<li><a href="#structure-error">Structure Error</a></li>
+<li><a href="#to-do_1">To Do</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <h1 id="meeting">Meeting</h1>
@@ -441,8 +447,8 @@ body{font-size:16px;}
 <td>ml 5.</td>
 <td></td>
 <td></td>
+<td>164</td>
 <td></td>
-<td>84</td>
 </tr>
 </tbody>
 </table>
@@ -483,4 +489,45 @@ body{font-size:16px;}
 <li>p1 5/5</li>
 <li>p2 20/20</li>
 <li>p3 20/20</li>
+</ul>
+<h1 id="2014318">2014/3/18</h1>
+<h2 id="problem">Problem</h2>
+<ul>
+<li>How to deal with the error in the value</li>
+<li>How to deal with the error in the structure</li>
+<li>How to deal with the situation that no unit </li>
+</ul>
+<h2 id="structure-error">Structure Error</h2>
+<p>T</p>
+<p>12</p>
+<ul>
+<li>Case0(2):Most of the case, just some of the P is error (recognize error). My program will consider them as structure error.<blockquote>
+<ul>
+<li>25.txt p2 error. 28.txt. For the error in the key name. And too much noise.</li>
+</ul>
+</blockquote>
+</li>
+<li>Case1(5): 17.txt, value of P1 is put in the last. 40.txt value of P1 is put in the front. 53.txt value of P1 is put in the end. 58.txt. 64.txt.</li>
+<li>Case2(3): 16.txt, 21.txt overall result is quite bad. 30.txt</li>
+<li>Case3(1): 37.txt, all key names and values are separated.</li>
+<li>
+<p>Case4(2): 56.txt, unit of P4 recognize error. 60.txt, unit of P4 missing.</p>
+</li>
+<li>
+<p>While I'm checking, it seems that the result keeps some line information.</p>
+</li>
+</ul>
+<h2 id="to-do_1">To Do</h2>
+<ul>
+<li>Enhance my structure function. <blockquote>
+<ul>
+<li>Enable that not all Ps are in order.</li>
+<li>Try to use the help of line information and something else to find the misplaced values.</li>
+</ul>
+</blockquote>
+</li>
+<li>Reading the paper for T to check out how does it split the lines. (Structure)</li>
+<li>Think about how to deal with those results which are quite bad overall.</li>
+<li>Improve the way finding the key names and units, especially in the environment filled will noise.</li>
+<li>Think abut how to correct the error in the value part.</li>
 </ul></body></html>
