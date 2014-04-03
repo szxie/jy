@@ -152,6 +152,20 @@ body{font-size:16px;}
 <li><a href="#to-do_1">To Do</a></li>
 </ul>
 </li>
+<li><a href="#2014319">2014/3/19</a><ul>
+<li><a href="#how-to-deal-with-the-problems">How to deal with the problems</a></li>
+<li><a href="#to-do_2">To Do</a></li>
+<li><a href="#meeting_1">Meeting</a></li>
+</ul>
+</li>
+<li><a href="#2014325">2014/3/25</a><ul>
+<li><a href="#position-of-characters">Position of characters</a></li>
+</ul>
+</li>
+<li><a href="#2014326">2014/3/26</a><ul>
+<li><a href="#data-structure">Data Structure</a></li>
+</ul>
+</li>
 </ul>
 </div>
 <h1 id="meeting">Meeting</h1>
@@ -495,7 +509,7 @@ body{font-size:16px;}
 <ul>
 <li>How to deal with the error in the value</li>
 <li>How to deal with the error in the structure</li>
-<li>How to deal with the situation that no unit </li>
+<li>How to deal with the pairs without unit </li>
 </ul>
 <h2 id="structure-error">Structure Error</h2>
 <p>T</p>
@@ -530,4 +544,33 @@ body{font-size:16px;}
 <li>Think about how to deal with those results which are quite bad overall.</li>
 <li>Improve the way finding the key names and units, especially in the environment filled will noise.</li>
 <li>Think abut how to correct the error in the value part.</li>
-</ul></body></html>
+</ul>
+<h1 id="2014319">2014/3/19</h1>
+<h2 id="how-to-deal-with-the-problems">How to deal with the problems</h2>
+<ul>
+<li>Specify the area we want.</li>
+</ul>
+<h2 id="to-do_2">To Do</h2>
+<ul>
+<li>Study the trend of the number to help to do the correction.</li>
+<li>Check the paper about post processing on OCR.</li>
+<li>Check the paper about T.</li>
+</ul>
+<h2 id="meeting_1">Meeting</h2>
+<p>Restatement the problem.</p>
+<p>Reorganized the txt using the position information in the picture. Then comes the problem.</p>
+<p>What we need to do is trying to find the best pairs in these new data structure with the following constraints.</p>
+<ul>
+<li>Key-value-unit should be best matching in this position.</li>
+<li>For all the tuples I get in one picture, combine them together to see whether they should be in the one picture or there are some tuples can't appear in the same picture. </li>
+</ul>
+<p>Finally, we need some data structure so that we can query it to get the value of the key we need.</p>
+<p>Something like spatial indexing may help.</p>
+<h1 id="2014325">2014/3/25</h1>
+<h2 id="position-of-characters">Position of characters</h2>
+<p>Using the hOCR output is enough.</p>
+<p><a href="https://docs.google.com/document/preview?id=1QQnIQtvdAC_8n92-LhwPcjtAUFwBlzE8EWnKAxlgVf0&amp;pli=1">Tesseract result formate</a></p>
+<h1 id="2014326">2014/3/26</h1>
+<h2 id="data-structure">Data Structure</h2>
+<p>For a line, first combine and classify the words into K/V/U/noise then generate the best matching in these three groups.</p>
+<p>Classify: similarity and position.</p></body></html>
