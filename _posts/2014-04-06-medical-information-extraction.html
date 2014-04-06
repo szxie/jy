@@ -1,0 +1,194 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman',
+              "Hiragino Sans GB", "STXihei", "微软雅黑", serif;
+  font-size:12px;
+  line-height:1.2em;
+  background:#fefefe;
+  width: 53em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2em; }
+h2{ font-size:1.5em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.2em; }
+h4{ font-size:1.0em; }
+h5{ font-size:1em; }
+h6{ font-size:0.8em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp { 
+  color: #000; 
+  font-family: monospace; 
+  font-size: 0.88em; 
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC; 
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px 12px;}
+pre code { border: 0px !important; padding: 0;}
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%; outline:none;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+</style>
+<title>conbine</title></head><body><h1 id="medical-information-extraction">Medical Information Extraction</h1>
+<h2 id="emr-extraction-david">EMR Extraction (David)</h2>
+<h3 id="introduction">Introduction</h3>
+<p>This project aims to extract structured data from the record provided from AstraZeneca. We mainly focus on the present illness history and past history, extract key information based on time, thus producing several records from one case of illness.</p>
+<p>An electronic medical record (EMR) is a digital version of a paper char that contains all of a patient’s medical history from one proactive. An EMR is mostly used by providers for diagnosis and treatment.</p>
+<h3 id="data-set">Data Set</h3>
+<p>Because this the project collaborate with AstraZeneca, the data set cannot open to the public. However the brief description of the data set is as follows: the total size of the input data is up to 50MB, which contains approximately 35000 cases. All of them contain past &amp; present history and other useful information.</p>
+<h3 id="approach">Approach</h3>
+<p>We use the Java regular expression external jar as well as the Stanford Parser tools to parse the input, extract the diseases concerned (we established a disease dictionary and the <a href="http://adapt.seiee.sjtu.edu.cn/~david/EMR_file/Disease_dictionary.csv">URL</a> from which you can download) as well as symptoms, narrative expression and many other features.</p>
+<h3 id="experimental-results">Experimental Results</h3>
+<p>The final statistic is as follows: </p>
+<ul>
+<li>The test number is 100 cases randomly selected from all the data</li>
+<li>We manually extracted 194 records from the 100 cases</li>
+<li>The Java parser extracted 221 records. </li>
+<li>The software-extracted results hit 170 records.</li>
+<li>Recall = 170 / 221 = 87.63%</li>
+<li>Precision = 170 / 194 = 76.92%</li>
+</ul>
+<p>Following is the links of the test data above:</p>
+<p>The output of 2001_2007data can be downloaded <a href="http://adapt.seiee.sjtu.edu.cn:8088/~david/EMR_file/2001_2007data.xls">here</a>, 100 randomly selected cases we regard as <a href="http://adapt.seiee.sjtu.edu.cn:8088/~david/EMR_file/benchmark.doc">benchmark</a>, manually extracted version is <a href="http://adapt.seiee.sjtu.edu.cn:8088/~david/EMR_file/human_extraction_from_benchmark.doc">here</a> and software-extracted result is <a href="http://adapt.seiee.sjtu.edu.cn:8088/~david/EMR_file/bench_mark_data.xls">here</a>.</p>
+
+<h2 id="information-extraction-on-ecg-using-ocr-jinyi">Information Extraction on ECG Using OCR (Jinyi)</h2>
+<h3 id="introduction">Introduction</h3>
+<p>The goal of this project is to use OCR to extract useful Information from the ECG pictures.</p>
+<p>OCR is short for Optical Character Recognition, which is used to convert scanned or photographed images of typewritten or printed text into machine-encoded/computer-readable text. 
+At the same time, ECG pictures contain may useful information in a structured format, which makes it possible to correct errors in the OCRed result.</p>
+<h3 id="data-set">Data Set</h3>
+<p>The experimental data set for this project is 80 ECG pictures from Beijing University Hospital.</p>
+<p>These pictures can be divided in to 12 different types. 
+The largest one contains 41 pictures and the experiment is focusing on these 41 pictures now. 
+The useful information in this pictures are all <em>key-value-unit</em> triples.</p>
+<h3 id="approach">Approach</h3>
+<p>The whole process includes:</p>
+<ol>
+<li>Pre-processing on pictures.</li>
+<p>Thresholding technology is used to remove the noise in the picture.</p>
+
+<p>Original picture & Thresholded picture:</p>
+<p>Key: Vent. rate Value: 81 Unit: bpm</p>
+<p><img alt="image" src="https://raw.githubusercontent.com/szxie/jy/gh-pages/images/or.png" width="45%"/><img alt="image" src="https://raw.githubusercontent.com/szxie/jy/gh-pages/images/pre.png" width="45%"/></p>
+
+<li>Using OCR engine.</li>
+<p>An open source OCR engine named Tesseract is used. So text output can be got.</p>
+
+<p>OCR result: </p>
+<p><img alt="image" src="https://raw.githubusercontent.com/szxie/jy/gh-pages/images/ocr.png" width="30%"/></p>
+
+
+<li>Post-processing on the OCR results.</li>
+
+<p>Actually, there are some position error in the OCR result. So it should be re-organized by using coordinate in the picture.</p>
+
+<p>Re-organized result:</p>
+<p><img alt="image" src="https://raw.githubusercontent.com/szxie/jy/gh-pages/images/post.png" width="40%"/></p>
+
+
+<li>Information extraction on the processed results.</li>
+<p>Some scoring methods are used to find the correct information in the text with noise.</p>
+<p>Triples extracted:</p>
+<p>Vent. rate<em>[81]</em>bpm  <br />
+PR interval<em>[148]</em>ms <br />
+QRS duration<em>[88]</em>ms <br />
+QT/QTc<em>[366/425]</em>ms  <br />
+P-R-T axes<em>[65, 67, 47]</em>   </p>
+
+</ol>
+<h3 id="experimental-result">Experimental Result</h3>
+<p>For all 41 pictures, which contain 5 useful key-value-unit triples, the roughly accuracy rate is 73% for now.</p>
+
+</body></html>
