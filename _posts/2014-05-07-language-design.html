@@ -217,7 +217,9 @@ Psource Pstruct triples{
 <p><img alt="image" src="https://raw.githubusercontent.com/szxie/jy/gh-pages/images/2014-05-07-language-design_files/t3_5_thtml.png"></p>
 <p><img alt="image" src="https://raw.githubusercontent.com/szxie/jy/gh-pages/images/2014-05-07-language-design_files/t3_5_ahtml.png"></p>
 <h3 id="code_1">Code</h3>
-<pre><code>Pstruct token_str_RV5{
+<pre><code>Pfuzzyseparator(:':':)  colon;
+
+Pstruct token_str_RV5{
     "span class='ocrx_word' id='word_9' title=/"bbox ";
     Pint x0;    ' ';
     Pint y0;    ' ';
@@ -229,9 +231,18 @@ Psource Pstruct triples{
 }
 
 Psource Pstruce triples{
-    Psapce(:x0:)    spacePR;
+    PsapceX(:x0:)    spacePR;
     token_str_t     tPR : Pconstrain("PR", ':', "ms", int);
-    Pspace(:x1:)    spaceRV5;
+    PspaceX(:x1:)    spaceRV5;
     token_str_RV5   tRV5;
+}
+
+Psource Pstruce triples1{
+    PsapceX(:x0:)    space0;
+    token_str_HR     tHR;
+    PsapceX(:xend:)  space1;
+    PsapceX(:x0:)    space0;
+    token_str_PR1    tPR1;
+    PsapceX(:xend:)  space1;   
 }
 </code></pre></body></html>
