@@ -9,7 +9,7 @@ body{
   font-size:12px;
   line-height:1.5em;
   background:#fefefe;
-  width: 45em;
+  width: 50em;
   margin: 10px auto;
   padding: 1em;
   outline: 1300px solid #FAFAFA;
@@ -216,4 +216,22 @@ Psource Pstruct triples{
 <p><img alt="image" src="https://raw.githubusercontent.com/szxie/jy/gh-pages/images/2014-05-07-language-design_files/t3_5.png"></p>
 <p><img alt="image" src="https://raw.githubusercontent.com/szxie/jy/gh-pages/images/2014-05-07-language-design_files/t3_5_thtml.png"></p>
 <p><img alt="image" src="https://raw.githubusercontent.com/szxie/jy/gh-pages/images/2014-05-07-language-design_files/t3_5_ahtml.png"></p>
-<h3 id="code_1">Code</h3></body></html>
+<h3 id="code_1">Code</h3>
+<pre><code>Pstruct token_str_RV5{
+    "span class='ocrx_word' id='word_9' title=/"bbox ";
+    Pint x0;    ' ';
+    Pint y0;    ' ';
+    Pint x1;    ' ';
+    Pint y1;    "/"&gt;";
+    Pstring(:':':)  k :   Pmatch("Rv5");  ':';
+    Pfloat      v;
+    Pstring(:'&lt;':) u;     "&lt;/span&gt;";
+}
+
+Psource Pstruce triples{
+    Psapce(:x0:)    spacePR;
+    token_str_t     tPR : Pconstrain("PR", ':', "ms", int);
+    Pspace(:x1:)    spaceRV5;
+    token_str_RV5   tRV5;
+}
+</code></pre></body></html>
