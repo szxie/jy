@@ -163,8 +163,7 @@ Pstruct triple0{
     token_str_t []  noise1 :  PendOfLine;
 }
 
-Pstruct triple1(:Pint x:){
-    PsapceX(:0, x:)  space;
+Pstruct triple1(){
     token_str_t     k0 :   Pmatch("PR");
     token_str_t     k1 :   Pmatch("interval");
     token_str_t []  noise0:  Pended(Parsecheck(Pint(&amp;noise[current])));
@@ -173,8 +172,7 @@ Pstruct triple1(:Pint x:){
     token_str_t []  noise1 :  PendOfLine;
 }
 
-Pstruct triple2(:Pint x:){
-    PsapceX(:0, x:)  space;
+Pstruct triple2(){
     token_str_t     k0 :   Pmatch("QRS");
     token_str_t     k1 :   Pmatch("duration");
     token_str_t []  noise0:  Pended(Parsecheck(Pint(&amp;noise[current])));
@@ -183,16 +181,14 @@ Pstruct triple2(:Pint x:){
     token_str_t []  noise1 :  PendOfLine;
 }
 
-Pstruct triple3(:Pint x:){
-    PsapceX(:0, x:)  space;
+Pstruct triple3(){
     token_str_t     k :   Pmatch("QT/QTC");
     token_str_t     v :   Pstatisfy("\d+/\d+");  
     token_str_t     u :   Pmatch("ms");
     token_str_t []  noise1 :  PendOfLine;
 }
 
-Pstruct triple4(:Pint x:){
-    PsapceX(:0, x:)  space;
+Pstruct triple4(){
     token_str_t     k0 :   Pmatch("P—R—T");
     token_str_t     k1 :   Pmatch("axes");
     token_str_t []  noise0  :  Pended(Parsecheck(Pint(&amp;noise[current])));
@@ -204,11 +200,15 @@ Pstruct triple4(:Pint x:){
 
 Psource Pstruct triples{
     triple0     t0;
-    triple1     t1(:t0.k0.x0:);
-    triple2     t2(:t0.k0.x0:);
-    triple3     t3(:t0.k0.x0:);
-    triple4     t4(:t0.k0.x0:);
-    PspaceY(:t4.k0.y1)  space;
+    PsapceX(:t0.k0.x0:) space1;
+    triple1     t1;
+    PsapceX(:t0.k0.x0:) space2;
+    triple2     t2;
+    PsapceX(:t0.k0.x0:) space3;
+    triple3     t3;
+    PsapceX(:t0.k0.x0:) space4;
+    triple4     t4;
+    PspaceY(:t4.k0.y1)  spaceEnd;
 }
 </code></pre>
 <h2 id="5">5</h2>
