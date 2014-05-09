@@ -146,12 +146,12 @@ Pstruct token_str_t{
     Pstring(:'&lt;':) content;     "&lt;/span&gt;";
 }
 
-Parray PsapceX(:Pint x, Pint y:){
-    token_str_t [] : Pended(Parsecheck(PrangeX(&amp;PsapceX[current], x, y)));
+Parray PspaceX(:Pint x, Pint y:){
+    token_str_t [] : Pended(Parsecheck(PrangeX(&amp;PspaceX[current], x, y)));
 }
 
-Parray PsapceY(:Pint x, Pint y:){
-    token_str_t [] : Pended(Parsecheck(PrangeY(&amp;PsapceY[current], x, y)));
+Parray PspaceY(:Pint x, Pint y:){
+    token_str_t [] : Pended(Parsecheck(PrangeY(&amp;PspaceY[current], x, y)));
 }
 
 Pstruct triple0{
@@ -200,13 +200,13 @@ Pstruct triple4(){
 
 Psource Pstruct triples{
     triple0     t0;
-    PsapceX(:t0.k0.x0:) space1;
+    PspaceX(:t0.k0.x0:) space1;
     triple1     t1;
-    PsapceX(:t0.k0.x0:) space2;
+    PspaceX(:t0.k0.x0:) space2;
     triple2     t2;
-    PsapceX(:t0.k0.x0:) space3;
+    PspaceX(:t0.k0.x0:) space3;
     triple3     t3;
-    PsapceX(:t0.k0.x0:) space4;
+    PspaceX(:t0.k0.x0:) space4;
     triple4     t4;
     PspaceY(:t4.k0.y1)  spaceEnd;
 }
@@ -231,18 +231,18 @@ Pstruct token_str_RV5{
 }
 
 Psource Pstruce triples{
-    PsapceX(:x0:)    spacePR;
+    PspaceX(:x0:)    spacePR;
     token_str_t     tPR : Pconstrain("PR", ':', "ms", int);
     PspaceX(:x1:)    spaceRV5;
     token_str_RV5   tRV5;
 }
 
 Psource Pstruce triples1{
-    PsapceX(:x0:)    space0;
+    PspaceX(:x0:)    space0;
     token_str_HR     tHR;
-    PsapceX(:xend:)  space1;
-    PsapceX(:x0:)    space0;
+    PspaceX(:xend:)  space1;
+    PspaceX(:x0:)    space0;
     token_str_PR1    tPR1;
-    PsapceX(:xend:)  space1;   
+    PspaceX(:xend:)  space1;   
 }
 </code></pre></body></html>
