@@ -209,4 +209,50 @@ horizontalSpace(Doc.x1/5);
 "MAC5K 006A"
 
 \end
+</code></pre>
+<h2 id="5">5</h2>
+<h3 id="image_1">Image</h3>
+<p><img alt="image" src="https://raw.githubusercontent.com/szxie/jy/gh-pages/images/2014-05-07-language-design_files/t3_5.png" /></p>
+<h3 id="code_1">Code</h3>
+<pre><code>type_key kHR("HR"),
+        kRR("R-R"),
+        kPR("P-R"),
+        kQRS("QRS"),
+        kQT("QT"),
+        kQTc("QTc"),
+        kZhou("轴"),
+        kRV5("RV5"),
+        kSV1("SV1"),
+        kRS("R+S");
+        kMing("明尼苏达码");
+
+\begin
+
+startPoint(0, 0);
+type_box box0{
+    kHR \b ':' vHR uHR \n
+    flushLeft(kHR.x0){
+        kRR ':' vRR uRR \n
+        kPR ':' vPR uPR \n
+    }
+}
+
+startPoint(box0.x1, box0.y0);
+verticalSpace(1);
+horizontalSpace(Doc.x1/6);
+type_box box1{
+    kZhou  ':' vZhou uZhou \n
+    flushLeft(kZhou.x0){
+        kRV5 ':' vRV5 uRV5 \n
+        kSV1 ':' vSV1 uSV1 \n
+    }
+}
+
+startPoint(box1.x1, box0.y0){
+    kMing \n
+    vMing_0 \t vMing_1 \n
+    vMing_2
+}
+
+\end
 </code></pre></body></html>
