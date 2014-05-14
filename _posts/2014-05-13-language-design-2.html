@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0063)file:///var/folders/rt/wd5y_2r95wzgrbtn5qk6rfs80000gn/T/30.html -->
+<!-- saved from url=(0063)file:///var/folders/rt/wd5y_2r95wzgrbtn5qk6rfs80000gn/T/28.html -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
 body{
@@ -138,10 +138,10 @@ type_unit u0("bpm"),
         u3("ms");
 type_time time;
 
-\begin
+\begin//start to describe the document
 
-startPoint(0, 0);
-horizontalSpace(Doc.x1/3);
+startPoint(0, 0);//set the coordinates of start point
+horizontalSpace(Doc.x1/3);//Doc represents the whole document
 "ID:"
 horizontalSpace(Doc.x1/5);
 time
@@ -154,20 +154,17 @@ type_box box0{
         k1 \t
         flushRight(v0.x1){v1} \b
         u1 \n
-    }
-    flushLeft(k0.x0){
+
         k2 \t
         flushRight(v0.x1){v2} \b
         u2 \n
-    }
-    flushLeft(k0.x0){
+
         k3 \t
         flushRight(v0.x1){
             v3_0 '/' v3_1
         } \b
         u3 \n
-    }
-    flushLeft(k0.x0){
+
         k4 \t
         v4_0 \b
         v4_1 \b
@@ -198,7 +195,7 @@ horizontalSpace(Doc.x1/4);
 \n
 
 type_box box3{
-    type_pic pic;
+    type_pic pic(Doc.x1, Doc.y1/2);//roughly describe the image size
 }
 
 startPoint(0, box3.y1);
@@ -212,7 +209,7 @@ horizontalSpace(Doc.x1/5);
 </code></pre>
 <h2 id="5">5</h2>
 <h3 id="image_1">Image</h3>
-<p><img alt="image" src="https://raw.githubusercontent.com/szxie/jy/gh-pages/images/2014-05-07-language-design_files/t3_5.png" /></p>
+<p><img alt="image" src="https://raw.githubusercontent.com/szxie/jy/gh-pages/images/2014-05-07-language-design_files/t3_5.png"></p>
 <h3 id="code_1">Code</h3>
 <pre><code>type_key kHR("HR"),
         kRR("R-R"),
@@ -248,8 +245,7 @@ type_box box1{
     }
 }
 
-startPoint(box1.x1, box0.y0);
-type_box box2{
+startPoint(box1.x1, box0.y0){
     kMing \n
     vMing_0 \t vMing_1 \n
     vMing_2
